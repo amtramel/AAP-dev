@@ -1,0 +1,9 @@
+---
+- name: My first Ansible playbook test
+  hosts: all
+  become_user: ansible
+  tasks:
+    - name: Print something meaningless on the screen
+      ansible.builtin.debug:
+        msg: "Hello from Ansible Automation Platform!"
+...
