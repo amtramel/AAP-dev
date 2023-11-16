@@ -1,8 +1,8 @@
 ---
 - name: My first Ansible playbook test
   hosts: all
-  ansible_become_user: ansible
-  ansible_become_pass: redhat
+  become_method: su
+  become_user: ansible
   tasks:
     - name: Print something meaningless on the screen
       ansible.builtin.debug:
